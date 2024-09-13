@@ -76,14 +76,17 @@ export default function Paginaton(){
             </table>
 
             <div style={{ marginTop: '20px' }}>
-                <button className="btn" onClick={handlePreviousPage} disabled={currentPage === 1}>
+                <button 
+                className="btn" onClick={handlePreviousPage} 
+                // disabled={currentPage === 1}
+                >
                     Previous
                 </button>
                 <span className="btn" style={{ margin: '0 10px' }}>{currentPage}</span>
                 <button
                     className="btn"
                     onClick={handleNextPage}
-                    disabled={currentPage === Math.ceil(employeesData.length / employeesPerPage)}
+                    // disabled={currentPage === Math.ceil(employeesData.length / employeesPerPage)}
                 >
                     Next
                 </button>
