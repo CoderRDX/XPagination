@@ -5,7 +5,7 @@ import './Pagination.css';
 
 export default function Paginaton(){
 
-    const api = "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json";
+    const api = "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json1";
 
     const [employeesData, setEmployeeData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -22,7 +22,6 @@ export default function Paginaton(){
                 // console.log(data)
 
             }catch(error){
-                console.error("Error fetching data: ", error);
                 alert("failed to fetch data");
 
             }
