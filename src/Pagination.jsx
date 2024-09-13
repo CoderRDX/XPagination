@@ -37,18 +37,14 @@ export default function Paginaton(){
     const currentEmployees = employeesData.slice(indexOfFirstEmployee, indexOfLastEmployee);
 
     const handleNextPage = () => {
-        if (currentPage == Math.ceil(employeesData.length / employeesPerPage)){
-            return;
-        }
+      
         if (currentPage < Math.ceil(employeesData.length / employeesPerPage)) {
         setCurrentPage(currentPage + 1);
         }
     };
 
     const handlePreviousPage = () => {
-        if(currentPage == 1){
-            return;
-        }
+       
         if (currentPage > 1) {
         setCurrentPage(currentPage - 1);
         }
