@@ -37,12 +37,18 @@ export default function Paginaton(){
     const currentEmployees = employeesData.slice(indexOfFirstEmployee, indexOfLastEmployee);
 
     const handleNextPage = () => {
+        if (currentPage == Math.ceil(employeesData.length / employeesPerPage)){
+            return;
+        }
         if (currentPage < Math.ceil(employeesData.length / employeesPerPage)) {
         setCurrentPage(currentPage + 1);
         }
     };
 
     const handlePreviousPage = () => {
+        if(currentPage == 1){
+            return;
+        }
         if (currentPage > 1) {
         setCurrentPage(currentPage - 1);
         }
@@ -74,14 +80,14 @@ export default function Paginaton(){
             </table>
 
             <div style={{ marginTop: '20px' }}>
-                <button className="btn" onClick={handlePreviousPage} disabled={currentPage === 1}>
+                <button className="btn" onClick={handlePreviousPage} >
                     Previous
                 </button>
                 <span className="btn" style={{ margin: '0 10px' }}>{currentPage}</span>
                 <button
                     className="btn"
                     onClick={handleNextPage}
-                    disabled={currentPage === Math.ceil(employeesData.length / employeesPerPage)}
+                    
                 >
                     Next
                 </button>
