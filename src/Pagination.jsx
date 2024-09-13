@@ -83,7 +83,7 @@ export default function Paginaton(){
                 <button
                     className="btn"
                     onClick={handleNextPage}
-                    disabled={currentPage === Math.ceil(employees.length / employeesPerPage)
+                    disabled={currentPage === Math.ceil(employeesData.length / employeesPerPage)
                     
                 >
                     Next
