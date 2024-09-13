@@ -1,0 +1,33 @@
+.table-head{
+    background-color: aquamarine;
+}
+.btn{
+    background-color: aquamarine;
+    /* margin: 10px */
+    padding: 8px;
+    border: 1px solid gray;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .employee-table th {
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .employee-row {
+    border-bottom: 1px solid #ccc;
+  }
+  
+
+  .employee-row:last-child {
+    border-bottom: none;
+  }
